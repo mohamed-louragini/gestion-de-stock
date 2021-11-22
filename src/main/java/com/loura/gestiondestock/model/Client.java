@@ -1,20 +1,18 @@
 package com.loura.gestiondestock.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "client")
-public class client extends AbstractEntity{
+public class Client extends AbstractEntity{
 
     @Column(name = "nom")
     private String nom;

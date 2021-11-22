@@ -1,16 +1,14 @@
 package com.loura.gestiondestock.model;
 
 import ch.qos.logback.core.net.server.Client;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.List;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -22,7 +20,7 @@ public class CommandeClient extends AbstractEntity{
     private String code;
 
     @Column(name = "datecommande")
-    private Instant dataCommande;
+    private Instant dateCommande;
 
     @ManyToOne
     @JoinColumn(name = "idclient")
