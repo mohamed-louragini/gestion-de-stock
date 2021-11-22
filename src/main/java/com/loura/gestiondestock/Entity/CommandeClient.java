@@ -1,6 +1,5 @@
-package com.loura.gestiondestock.model;
+package com.loura.gestiondestock.Entity;
 
-import ch.qos.logback.core.net.server.Client;
 import lombok.*;
 
 import javax.persistence.*;

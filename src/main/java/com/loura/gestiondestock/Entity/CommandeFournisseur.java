@@ -1,4 +1,4 @@
-package com.loura.gestiondestock.model;
+package com.loura.gestiondestock.Entity;
 
 
 import lombok.*;

@@ -1,6 +1,6 @@
 package com.loura.gestiondestock.dto;
 
-import com.loura.gestiondestock.model.CommandeFournisseur;
+import com.loura.gestiondestock.Entity.CommandeFournisseur;
 import lombok.Builder;
 import lombok.Data;
 

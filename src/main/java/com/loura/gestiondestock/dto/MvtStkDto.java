@@ -1,6 +1,6 @@
 package com.loura.gestiondestock.dto;
 
-import com.loura.gestiondestock.model.TypeMvtStk;
+import com.loura.gestiondestock.Entity.TypeMvtStk;
 import lombok.Builder;
 import lombok.Data;
 
