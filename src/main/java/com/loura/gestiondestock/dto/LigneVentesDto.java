@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 @Builder
 public class LigneVentesDto {
 
+    private Integer id;
+
     private VentesDto vente;
 
     private BigDecimal quantite;

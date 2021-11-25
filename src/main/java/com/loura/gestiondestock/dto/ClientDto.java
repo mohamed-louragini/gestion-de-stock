@@ -1,6 +1,6 @@
 package com.loura.gestiondestock.dto;
 
-import com.loura.gestiondestock.Entity.Adress;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
@@ -10,11 +10,13 @@ import java.util.List;
 @Builder
 public class ClientDto {
 
+    private Integer id;
+
     private String nom;
 
     private String prenom;
 
-    private Adress adress;
+    private AdresseDto adress;
 
     private String photo;
 
@@ -22,5 +24,6 @@ public class ClientDto {
 
     private String numTel;
 
+    @JsonIgnore
     private List<CommandeClientDto> commandeClient;
 }
