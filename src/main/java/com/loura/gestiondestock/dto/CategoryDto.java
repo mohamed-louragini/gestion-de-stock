@@ -39,9 +39,11 @@ public class CategoryDto {
             //TODO throw an exeption
         }
 
-        return Category.builder()
-                .code(categoryDto.getCode())
-                .destination(categoryDto.getDestination())
-                .build();
+        Category category = new Category();
+        category.setId(category.getId());
+        category.setCode(category.getCode());
+        category.setDestination(categoryDto.getDestination());
+
+        return category;
     }
 }

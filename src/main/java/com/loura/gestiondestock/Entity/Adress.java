@@ -4,14 +4,14 @@ import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @Embeddable
-public class Adress {
+public class Adress implements Serializable {
 
     @Column(name = "adress1")
     private String adress1;
