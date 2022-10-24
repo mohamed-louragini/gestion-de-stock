@@ -1,4 +1,4 @@
-package com.loura.gestiondestock.Entity;
+package com.loura.gestiondestock.model;
 
 import lombok.*;
 
@@ -11,16 +11,21 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "lignevente")
-public class LigneVente extends AbstractEntity{
+@Table(name = "lignecommandeclient")
+public class LigneCommandeClient extends AbstractEntity {
 
     @ManyToOne
-    @JoinColumn(name = "idvente")
-    private Ventes vente;
+    @JoinColumn(name = "idarticle")
+    private Article article;
+
+    @ManyToOne
+    @JoinColumn(name = "idcommandeclient")
+    private CommandeClient commandeClient;
 
     @Column(name = "quantite")
     private BigDecimal quantite;
 
     @Column(name = "prixunitaire")
     private BigDecimal prixUnitaire;
+
 }

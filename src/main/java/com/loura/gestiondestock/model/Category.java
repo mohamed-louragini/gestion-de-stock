@@ -1,4 +1,4 @@
-package com.loura.gestiondestock.Entity;
+package com.loura.gestiondestock.model;
 
 import lombok.*;
 
@@ -28,6 +28,6 @@ public class Category extends AbstractEntity{
     private List<Article> articles;
 
     Category(Integer id, Instant creationDate, Instant lastUpdatedDate) {
-        super(id, creationDate, lastUpdatedDate);
+        super();
     }
 }

@@ -1,4 +1,4 @@
-package com.loura.gestiondestock.Entity;
+package com.loura.gestiondestock.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

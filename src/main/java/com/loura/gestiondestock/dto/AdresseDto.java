@@ -1,6 +1,6 @@
 package com.loura.gestiondestock.dto;
 
-import com.loura.gestiondestock.Entity.Adress;
+import com.loura.gestiondestock.model.Adress;
 import lombok.Builder;
 import lombok.Data;
 

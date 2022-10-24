@@ -1,7 +1,7 @@
 package com.loura.gestiondestock.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.loura.gestiondestock.Entity.Category;
+import com.loura.gestiondestock.model.Category;
 import lombok.Builder;
 import lombok.Data;
 
@@ -23,7 +23,7 @@ public class CategoryDto {
     public CategoryDto fromEntity(Category category){
         if (category == null){
             return null;
-            //TODO throw an exeption
+            // TODO throw an exeption
         }
 
         return CategoryDto.builder()
