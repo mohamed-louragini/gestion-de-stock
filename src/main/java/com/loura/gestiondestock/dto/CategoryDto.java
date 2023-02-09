@@ -23,7 +23,7 @@ public class CategoryDto {
     public CategoryDto fromEntity(Category category){
         if (category == null){
             return null;
-            // TODO throw an exeption
+            //TODO throw an exeption
         }
 
         return CategoryDto.builder()
