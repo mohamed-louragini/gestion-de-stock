@@ -44,7 +44,6 @@ public class UtilisateurDto {
                 .dateDeNaissance(utilisateur.getDateDeNaissance())
                 .adress(AdresseDto.fromEntity(utilisateur.getAdress()))
                 .photo(utilisateur.getPhoto())
-                .Entreprise(utilisateur.getIdEntreprise())
                     .build();
     }
 }
