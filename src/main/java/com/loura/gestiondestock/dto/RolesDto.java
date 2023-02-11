@@ -1,5 +1,6 @@
 package com.loura.gestiondestock.dto;
 
+import com.loura.gestiondestock.model.Roles;
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,4 +13,8 @@ public class RolesDto {
     private String roleName;
 
     private UtilisateurDto utilisateur;
+
+    public static RolesDto fromEntity(Roles roles) {
+
+    }
 }

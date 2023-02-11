@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @Builder
@@ -20,7 +21,7 @@ public class CategoryDto {
     @JsonIgnore
     private List<ArticleDto> articles;
 
-    public CategoryDto fromEntity(Category category){
+    public static CategoryDto fromEntity(Category category){
         if (category == null){
             return null;
             //TODO throw an exeption
@@ -30,18 +31,24 @@ public class CategoryDto {
                 .id(category.getId())
                 .code(category.getCode())
                 .destination(category.getDestination())
+                .articles(
+                        category.getArticles() != null ?
+                                category.getArticles().stream()
+                                        .map(ArticleDto::fromEntity)
+                                        .collect(Collectors.toList()) : null
+                )
                 .build();
     }
 
-    public Category toEntity(CategoryDto categoryDto){
+    public static Category toEntity(CategoryDto categoryDto){
         if (categoryDto == null){
             return null;
             //TODO throw an exeption
         }
 
         Category category = new Category();
-        category.setId(category.getId());
-        category.setCode(category.getCode());
+        category.setId(categoryDto.getId());
+        category.setCode(categoryDto.getCode());
         category.setDestination(categoryDto.getDestination());
 
         return category;

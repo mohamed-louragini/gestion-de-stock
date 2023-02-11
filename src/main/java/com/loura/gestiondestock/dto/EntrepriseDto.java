@@ -30,7 +30,7 @@ public class EntrepriseDto {
 
     private List<UtilisateurDto> utilisateur;
 
-    public EntrepriseDto fromEntity(Entreprise entreprise) {
+    public static EntrepriseDto fromEntity(Entreprise entreprise) {
         if (entreprise == null) {
             return null;
         }
@@ -45,7 +45,7 @@ public class EntrepriseDto {
                 .steWeb(entreprise.getSteWeb())
                 .build();
     }
-    public Entreprise toEntity(EntrepriseDto entrepriseDto) {
+    public static Entreprise toEntity(EntrepriseDto entrepriseDto) {
         if (entrepriseDto == null) {
             return null;
         }
