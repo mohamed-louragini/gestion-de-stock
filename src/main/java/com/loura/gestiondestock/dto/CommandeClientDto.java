@@ -21,7 +21,7 @@ public class CommandeClientDto {
 
     private List<LigneCommandeClientDto> ligneCommandeClients;
 
-    public CommandeClientDto fromEntity(CommandeClient commandeClient) {
+    public static CommandeClientDto fromEntity(CommandeClient commandeClient) {
         if (commandeClient == null) {
             return null;
         }

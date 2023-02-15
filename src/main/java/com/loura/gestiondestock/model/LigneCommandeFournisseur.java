@@ -2,10 +2,8 @@ package com.loura.gestiondestock.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
@@ -15,6 +13,11 @@ import javax.persistence.Table;
 @Table(name = "lignecommandefournisseur")
 public class LigneCommandeFournisseur extends AbstractEntity{
 
+    @Column(name = "quantite")
+    private BigDecimal quantite;
+
+    @Column(name = "prixUnitaire")
+    private BigDecimal prixUnitaire;
     @ManyToOne
     @JoinColumn(name = "idarticle")
     private Article article;

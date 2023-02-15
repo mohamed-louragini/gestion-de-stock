@@ -15,6 +15,13 @@ public class RolesDto {
     private UtilisateurDto utilisateur;
 
     public static RolesDto fromEntity(Roles roles) {
-
+        if(roles == null) {
+            return null; //TODO throw an exeption
+        }
+        return RolesDto.builder()
+                .id(roles.getId())
+                .roleName(roles.getRoleName())
+                .utilisateur(UtilisateurDto.toEntity(roles.getUtilisateur()))
+                .build();
     }
 }

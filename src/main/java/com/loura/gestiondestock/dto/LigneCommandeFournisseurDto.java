@@ -1,6 +1,5 @@
 package com.loura.gestiondestock.dto;
 
-import com.loura.gestiondestock.model.CommandeFournisseur;
 import com.loura.gestiondestock.model.LigneCommandeFournisseur;
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +14,7 @@ public class LigneCommandeFournisseurDto {
 
     private ArticleDto article;
 
-    private CommandeFournisseur commandeFournisseur;
+    private CommandeFournisseurDto commandeFournisseur;
 
     private BigDecimal quantite;
 
@@ -27,7 +26,10 @@ public class LigneCommandeFournisseurDto {
         }
         return LigneCommandeFournisseurDto.builder()
                 .id(ligneCommandeFournisseur.getId())
-                //.quantite(ligneCommandeFournisseur.get)
+                .article(ArticleDto.fromEntity(ligneCommandeFournisseur.getArticle()))
+                .commandeFournisseur(CommandeFournisseurDto.fromEntity(ligneCommandeFournisseur.getCommandeFournisseur()))
+                .quantite(ligneCommandeFournisseur.getQuantite()) //TODO
+                .prixUnitaire(ligneCommandeFournisseur.getPrixUnitaire()) //TODO
                 //TODO
                 .build();
     }
