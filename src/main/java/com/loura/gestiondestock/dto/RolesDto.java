@@ -21,7 +21,18 @@ public class RolesDto {
         return RolesDto.builder()
                 .id(roles.getId())
                 .roleName(roles.getRoleName())
-                .utilisateur(UtilisateurDto.toEntity(roles.getUtilisateur()))
+                .utilisateur(UtilisateurDto.fromEntity(roles.getUtilisateur()))
                 .build();
+    }
+
+    public static Roles toEntity(RolesDto rolesDto) {
+        if (rolesDto == null) {
+            return null;
+        }
+        Roles roles = new Roles();
+        roles.setId(rolesDto.getId());
+        roles.setRoleName(rolesDto.getRoleName());
+        //TODO setter for utilisateur dto
+        return roles;
     }
 }

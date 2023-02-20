@@ -45,7 +45,7 @@ public class UtilisateurDto {
                 .dateDeNaissance(utilisateur.getDateDeNaissance())
                 .adress(AdresseDto.fromEntity(utilisateur.getAdress()))
                 .photo(utilisateur.getPhoto())
-                .entreprise(EntrepriseDto.fromEntity(utilisateur.getEntreprise())) //TODO check this line
+                //.entreprise(EntrepriseDto.fromEntity(utilisateur.getEntreprise())) //TODO check this line
                 .roles(
                         utilisateur.getRoles() != null ?
                                 utilisateur.getRoles().stream()
